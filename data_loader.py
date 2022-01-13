@@ -29,8 +29,10 @@ class Utterances(data.Dataset):
                         args=(meta[i:i+self.step],dataset,i))  
             p.start()
             processes.append(p)
+        print("Number of processes: {}".format(len(processes)))
         for p in processes:
             p.join()
+            print("Done joining process")
             
         self.train_dataset = list(dataset)
         self.num_tokens = len(self.train_dataset)
@@ -47,6 +49,7 @@ class Utterances(data.Dataset):
                 else: # load the mel-spectrograms
                     uttrs[j] = np.load(os.path.join(self.root_dir, tmp))
             dataset[idx_offset+k] = uttrs
+            print("Finish loading spearker {}".format(uttrs[0]))
                    
         
     def __getitem__(self, index):
