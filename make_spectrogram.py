@@ -2,6 +2,7 @@ import os
 import pickle
 import numpy as np
 import soundfile as sf
+import librosa
 from scipy import signal
 from scipy.signal import get_window
 from librosa.filters import mel
@@ -39,7 +40,7 @@ b, a = butter_highpass(30, 16000, order=5)
 # audio file directory
 rootDir = './wavs'
 # spectrogram directory
-targetDir = './spmel'
+targetDir = './spmel_16'
 
 
 dirName, subdirList, _ = next(os.walk(rootDir))
@@ -53,7 +54,7 @@ for subdir in sorted(subdirList):
     prng = RandomState(int(subdir[1:])) 
     for fileName in sorted(fileList):
         # Read audio file
-        x, fs = sf.read(os.path.join(dirName,subdir,fileName))
+        x, fs = librosa.load(os.path.join(dirName,subdir,fileName), sr = 16000)
         # Remove drifting noise
         y = signal.filtfilt(b, a, x)
         # Ddd a little random noise for model roubstness
