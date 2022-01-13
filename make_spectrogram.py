@@ -40,7 +40,7 @@ b, a = butter_highpass(30, 16000, order=5)
 # audio file directory
 rootDir = './wavs'
 # spectrogram directory
-targetDir = './spmel_16'
+targetDir = './spmel_16khz'
 
 
 dirName, subdirList, _ = next(os.walk(rootDir))
