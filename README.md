@@ -4,7 +4,7 @@ For more information, please checkout the original paper and GitHub repository
 (links below)
 ***
 # Desciptions 
-Here, we adapt the AutoVC model to solve the many-to-many as well as the zero-shot voice conversion problem  
+Here, we adopt the AutoVC model to solve the many-to-many as well as the zero-shot voice conversion problem  
 If you want to train the model, please checkout the **Instructions** below  
 The purpose of each file in our repository will be described as follow  
 ## Directories
