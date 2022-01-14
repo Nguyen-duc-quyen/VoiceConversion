@@ -56,7 +56,7 @@ If you want to train the model with your own dataset, please follow these instru
 [AUTOVC: Zero-Shot Voice Style Transfer with Only Autoencoder Loss](https://arxiv.org/abs/1905.05879)  
 
 **Author's GitHub Repository:**
-[link](https://github.com/auspicious3000/autovc.git)  
+[https://github.com/auspicious3000/autovc.git](https://github.com/auspicious3000/autovc.git)  
 
 
 
