@@ -1,5 +1,5 @@
 # The AutoVC model to solve the voice conversion problem  
-This is our implementation of the AutoVC model  
+This is our implementation for the AutoVC model  
 For more information, please checkout the original paper and GitHub repository
 (links below)
 ***
